@@ -38,7 +38,7 @@ public class AuditService {
 
 	public AnalyticsDashboardBean retrieveAnalyticsDashboardService(Date fromDate, Date toDate) {
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");  
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
 		String fromDateStr = dateFormat.format(fromDate);
 		String toDateStr = dateFormat.format(toDate);
 		
