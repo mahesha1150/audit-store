@@ -17,7 +17,7 @@ import com.metakeep.auditstore.bean.AuditBean;
 import com.metakeep.auditstore.service.AuditService;
 
 @RestController
-@CrossOrigin(origins = "/*")
+@CrossOrigin(origins = "*")
 public class AuditController {
 
 	private Logger logger = LoggerFactory.getLogger(AuditController.class);
