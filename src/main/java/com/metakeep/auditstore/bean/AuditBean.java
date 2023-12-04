@@ -16,6 +16,11 @@ public class AuditBean {
 	private String errorMessage;
 	private String httpServletRequest;
 	private String httpServletResponse;
+
+	public AuditBean() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public AuditBean(String userId, Date requestTime, String status, String errorMessage,
 			String httpServletRequest, String httpServletResponse) {
 		super();

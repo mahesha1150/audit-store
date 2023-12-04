@@ -28,7 +28,7 @@ public class AuditController {
 	@PostMapping("/audit")
 	public String audit(@RequestBody AuditBean auditBean) {
 		String response = "Received bean with name: " + auditBean.getUserId();
-		System.out.println(response);
+		/* System.out.println(response); */
 
 		auditService.auditService(auditBean);
 		return response;
@@ -37,7 +37,10 @@ public class AuditController {
 	
 	@GetMapping("/analytics-dashboard")
 	public AnalyticsDashboardBean analyticsDashboard(@RequestParam Date fromDate, @RequestParam Date toDate) {
-		System.out.println("Received parameters: param1=" + fromDate + ", param2=" + toDate);
+		/*
+		 * System.out.println("Received parameters: param1=" + fromDate + ", param2=" +
+		 * toDate);
+		 */
 		
 		AnalyticsDashboardBean anlayticsDashboardData = auditService.retrieveAnalyticsDashboardService(fromDate, toDate);
 		
@@ -46,5 +49,11 @@ public class AuditController {
 		return anlayticsDashboardData;
 	}
 	
-	
+	@GetMapping("/mock-data")
+	public String mockData() {
+			
+		String noOfUsersAdded = auditService.mockData();
+			
+		return noOfUsersAdded;
+	}
 }
